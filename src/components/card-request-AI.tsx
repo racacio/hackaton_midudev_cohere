@@ -201,11 +201,13 @@ export const CardRequestAI = ({ isValidInput, validInput, setTypeAI, setResponse
                     </div>
                 </>)}
                 {!isValidInput && (
-                    <strong className="text-red-800">
-                        {optionSelect.labelError}
-                    </strong>
+                    <div className="flex justify-center gap-4 mt-2 mb-2">
+                        <strong className="text-red-800">
+                            {optionSelect.labelError}
+                        </strong>
+                    </div>
                 )}
-                <CardFooter divider className="flex justify-center gap-4 pt-2">
+                <CardFooter divider className="flex justify-center gap-4 py-1">
                     <Button variant={loadData ? "outlined" : "gradient"} size="lg" className={confBtn.classBtn} disabled={!isValidInput || loadData} onClick={handleClick}>
                         {confBtn.textBtn} <i className={confBtn.iconBtn} />
                     </Button>

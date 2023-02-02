@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { Navigate, Route, Routes } from "react-router-dom";
 import { Navbar } from "@/common/components/navbar";
-import routes from "@/routes";
+import routes from "@/routes/routes";
 
 function App() {
   const [loading, setLoading] = useState<boolean>(false);
