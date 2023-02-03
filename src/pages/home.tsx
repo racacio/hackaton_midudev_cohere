@@ -22,7 +22,8 @@ export const Home = () => {
 
     return (
         <>
-            <div className="relative block h-[60vh] pt-28">
+        {/* relative block h-[60vh] pt-28 */}
+            <div className="relative flex h-[60vh] content-center items-center justify-center pt-8 pb-16">
                 <div className="bg-profile-background absolute top-0 h-full w-full bg-[url('/img/background-1.jpeg')] bg-cover bg-center" />
                 <div className="absolute top-0 h-full w-full bg-black/75 bg-cover bg-center" />
                 <div className="max-w-8xl container relative mx-auto">
@@ -38,7 +39,7 @@ export const Home = () => {
                     </div>
                 </div>
             </div>
-            <section className="-mt-52 bg-gray-50 px-4 pb-20 pt-4">
+            <section className="-mt-32 bg-gray-50 px-4 pb-20 pt-4">
                 <div className="container mx-auto">
                     <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-2">
                         <CardRequestAI isValidInput={cardRequest.inputValid} validInput={validInput} setTypeAI={setTypeAI} setResponseGenerateAI={setResponseGenerateAI} setResponseClassifyAI={setResponseClassifyAI} />
