@@ -1,5 +1,5 @@
-# Hackaton Midudev Cohere
-## Hackaton Enero 2023 MiduDev - Cohere - Inteligencia Artificial
+# Hackathon Midudev Cohere
+## Hackathon Enero 2023 MiduDev - Cohere - Inteligencia Artificial
 ### Descripcion
 
 Aplicacion desarrollada para el hackathon organizado por [midudev](https://github.com/midudev) usando la API de Cohere.
