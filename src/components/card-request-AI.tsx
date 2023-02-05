@@ -173,35 +173,35 @@ export const CardRequestAI = ({ isValidInput, validInput, setTypeAI, setResponse
                 <Typography variant="h5" className="mb-2" color="blue-gray">
                     COHERE Examples
                 </Typography>
-                <Select variant="standard" label="Select Presets" value={optionSelect.key} onChange={handSelectChange}>
+                <Select variant="standard" label="Select Presets" value={optionSelect.key} onChange={handSelectChange} data-testid="typeAI">
                     {lOptionsSelect.map(({ key, title, type }: iOptionSelect) => <Option key={key} value={key}>{type} - {title}</Option>)}
                 </Select>
-                <Typography variant="h6" className="mt-4 underline" color="blue-gray">
+                <Typography variant="h6" className="mt-4 underline" color="blue-gray" data-testid="titleOption">
                     {optionSelect.title}
                 </Typography>
-                <div className="border-dotted border-4 border-sky-500 rounded-lg mt-2 px-2 py-2 text-justify">
+                <div className="border-dotted border-4 border-sky-500 rounded-lg mt-2 px-2 py-2 text-justify" data-testid="exampleOption">
                     <Typography variant="paragraph" color="blue-gray">
                         {optionSelect.label}
                     </Typography>
                     {optionSelect.example}
                 </div>
                 {optionSelect.type == COHERE_TYPE_GENERATE && (<Textarea
-                    variant="standard" size="lg" rows={8} placeholder={optionSelect.placeholder} onChange={handleTextChange} value={inputText}
+                    variant="standard" size="lg" rows={8} placeholder={optionSelect.placeholder} onChange={handleTextChange} value={inputText} data-testid="inputOption"
                 />)}
                 {optionSelect.type == COHERE_TYPE_CLASSIFY && (<>
                     <Input
-                        id="inputText" variant="standard" size="lg" placeholder={optionSelect.placeholder} icon={<i className="fa-solid fa-check-to-slot" onClick={handleAddList} ></i>}
+                        id="inputText" variant="standard" size="lg" placeholder={optionSelect.placeholder} data-testid="inputText" icon={<i className="fa-solid fa-check-to-slot" onClick={handleAddList} data-testid="btnAddClassify"></i>}
                     />
-                    <div className="flex flex-col rounded-md border-gray-90">
+                    <div className="flex flex-col rounded-md border-gray-90" data-testid="listInput">
                         {listText.map((item) => (
                             <Input key={item.key} id={item.key.toString()} disabled
-                                variant="standard" size="lg" defaultValue={`- ${item.input}`} icon={<i className="fa-solid fa-eraser" onClick={() => handleDelList(item.key)} ></i>}
+                                variant="standard" size="lg" defaultValue={`- ${item.input}`} icon={<i className="fa-solid fa-eraser" onClick={() => handleDelList(item.key)} data-testid={`btnDelClassify${item.key}`}></i>}
                             />
                         ))}
                     </div>
                 </>)}
                 {!isValidInput && (
-                    <div className="flex justify-center gap-4 mt-2 mb-2">
+                    <div className="flex justify-center gap-4 mt-2 mb-2" data-testid="labelError">
                         <strong className="text-red-800">
                             {optionSelect.labelError}
                         </strong>

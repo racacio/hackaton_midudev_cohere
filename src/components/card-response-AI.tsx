@@ -44,7 +44,7 @@ export const CardResponseAI = ({ typeAI, responseGenerateAI, responseClassifyAI 
                 <Typography variant="h5" className="mb-4" color="blue-gray">
                     COHERE Response
                 </Typography>
-                <div className={!responseGenerateAI && !responseClassifyAI.length ? "" : "w-full border-dotted border-4 border-sky-500 rounded-lg"}>
+                <div className={!responseGenerateAI && !responseClassifyAI.length ? "" : "w-full border-dotted border-4 border-sky-500 rounded-lg"} data-testid="responseArea">
                     {typeAI == COHERE_TYPE_GENERATE && responseGenerateAI && (
                         <Typography variant="paragraph" className="mt-2 px-2 py-2 text-justify">
                             {responseGenerateAI}
